@@ -1,0 +1,53 @@
+<div class="container">
+    <form class="col-12" [formGroup]="discountForm" (ngSubmit)="addDiscount()">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Description</label>
+            <input formControlName="description" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Image path</label>
+            <input formControlName="imagePath" type="text" class="form-control" id="exampleInputPassword1">
+        </div>
+        <ng-container *ngIf="!isUploaded">
+            <div class="mb-3">
+                <label for="fromFile" class="form-label">Image</label>
+                <input type="file" class="form-control" id="formFile" (change)="upload($event)">
+            </div>
+            <div class="progress mb-3" role="progressbar" aria-label="Default striped example" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped" [style.width.%]="uploadPercent"></div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="isUploaded">
+            <img [src]="valueByControl('imagePath')" alt="">
+            <button type="button" class="btn btn-danger" (click)="deleteImage()">Delete</button>
+        </ng-container>
+        <button [disabled]="discountForm.invalid" type="submit" class="btn btn__add">{{ editStatus ? 'Save'
+            : 'Add' }}</button>
+    </form>
+    <table class="table">
+        <tr>
+            <th>#</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor="let discounts of adminDiscounts; index as i"> 
+            <td>{{ i + 1 }}</td>
+            <td>{{ discounts.description | slice:0:60 }}<span *ngIf="discounts.description.length > 60">...</span></td>
+            <td><img [src]="discounts.imagePath" class="discount__img"></td>
+            <td><button
+                (click)="editDiscount(discounts)"
+                type="button"
+                class="btn btn-secondary me-2"
+                >Edit</button>
+            </td>
+            <td><button 
+                (click)="deleteDiscount(discounts)"
+                type="button"
+                class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

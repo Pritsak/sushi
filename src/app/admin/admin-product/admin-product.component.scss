@@ -1,0 +1,29 @@
+@import '../../shared/styles/variables';
+
+.btn__open {
+    margin-top: 10px;
+    background-color: $primary;
+    color: #252525;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    width: 177px;
+    height: 36px;
+    margin-left: 13px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+.btn__add {
+    margin-top: 10px;
+    background-color: $primary;
+    color: #252525;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    width: 177px;
+    height: 36px;
+}
+

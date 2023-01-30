@@ -1,0 +1,93 @@
+<div class="row">
+    <button class="btn btn__open" (click)="toggleOpenForm()">{{ isOpen ? 'Закрити': 'Додати продукт'}}</button>
+    <ng-container *ngIf="isOpen">
+        <div class="col-12">
+            <form [formGroup]="productForm" (ngSubmit)="addProduct()">
+                <div class="mb-3">
+                    <select formControlName="category" class="form-select">
+                        <option [ngValue]="categories" *ngFor="let categories of adminCategories">{{ categories.name }}</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <input formControlName="name" name="name" type="text" class="form-control" id="name"
+                            placeholder="Назва">
+                    </div>
+                    <div class="col mb-3">
+                        <input formControlName="path" name="path" type="text" class="form-control" id="path"
+                            placeholder="Шлях">
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input formControlName="ingredients" name="ingredients" type="text" class="form-control"
+                        id="ingredients" placeholder="Інгредієнти">
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <input formControlName="weight" name="weight" type="text" class="form-control" id="weight"
+                            placeholder="вага">
+                    </div>
+                    <div class="col mb-3">
+                        <input formControlName="price" name="price" type="text" class="form-control" id="price"
+                            placeholder="Ціна">
+                    </div>
+                </div>
+                <ng-container *ngIf="!isUploaded">
+                    <div class="mb-3">
+                        <input type="file" class="form-control" id="formFile" (change)="upload($event)">
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="isUploaded">
+                    <img [src]="valueByControl('imagePath')" alt="" width="100px">
+                    <button type="button" class="btn btn-danger" (click)="deleteImage()">Delete</button>
+                </ng-container>
+                <button [disabled]="productForm.invalid" class="btn btn__add" type="submit">{{ editStatus ? 'Зберегти'
+                    : 'Додати' }}</button>
+            </form>
+        </div>
+    </ng-container>
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Path</th>
+                    <th scope="col">ingredients</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of adminProduct; index as i">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ product.category.name }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.path }}</td>
+                    <td>{{ product.ingredients }}</td>
+                    <td>{{ product.weight }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>
+                        <img [src]="product.imagePath" alt="" height="50px">
+                    </td>
+                    <td>
+                        <button type="button" 
+                            class="btn btn-secondary me-2" 
+                            (click)="editProduct(product)">
+                            Edit
+                        </button>
+                        <button  type="button"
+                            class="btn btn-danger"
+                            (click)="deleteProduct(product)"
+                            >
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

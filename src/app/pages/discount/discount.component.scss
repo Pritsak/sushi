@@ -1,0 +1,37 @@
+@import '../../shared/styles/variables';
+
+h2 {
+    text-align: center;
+    color: #252525;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.4em;
+}
+
+h5 {
+    margin-top: 20px;
+    margin-bottom: 11px;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    color: #252525;
+    font-weight: bold;
+    text-align: center;
+}
+
+.discount__btn {
+    background-color: $primary;
+    border-color: $primary;
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    padding: 16px 22px;
+    border-radius: 10px;
+    color: #252525;
+}

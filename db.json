@@ -1,0 +1,68 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "sushi",
+      "path": "Sushi",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a32ed.appspot.com/o/images%2FScreenshot%202023-01-24%20210540.png?alt=media&token=fd99582d-82ea-4f37-9738-1b58db52bd88"
+    },
+    {
+      "id": 2,
+      "name": "drinks",
+      "path": "drinks",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a32ed.appspot.com/o/images%2FScreenshot%202023-01-24%20210552.png?alt=media&token=4619b3cf-b4b5-4281-91f8-da90836a1496"
+    },
+    {
+      "name": "sauses",
+      "path": "sauces",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a32ed.appspot.com/o/images%2FScreenshot%202023-01-24%20210603.png?alt=media&token=534e392c-35bd-4d65-811a-8a90feeacec5",
+      "id": 3
+    }
+  ],
+  "discounts": [
+    {
+      "id": 1,
+      "description": "3+1=5 ",
+      "imagePath": "https://monosushi.com.ua/wp-content/uploads/2022/07/imgonline-com-ua-compressed-ajbic74qfau00-scaled-697x379.jpg"
+    },
+    {
+      "id": 2,
+      "description": "Рол тижня",
+      "imagePath": "https://monosushi.com.ua/wp-content/uploads/2022/07/imgonline-com-ua-compressed-ryna9n84oqh1-scaled-697x379.jpg"
+    }
+  ],
+  "products": [
+    {
+      "category": {
+        "id": 1,
+        "name": "sushi",
+        "path": "Sushi",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a32ed.appspot.com/o/images%2FScreenshot%202023-01-24%20210540.png?alt=media&token=fd99582d-82ea-4f37-9738-1b58db52bd88"
+      },
+      "name": "Філадельфія з лососем",
+      "path": "filadelfiya-z-lososem",
+      "price": "247",
+      "ingredients": "Риc, крем сир, огірок, лосось",
+      "weight": "280",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a32ed.appspot.com/o/images%2FScreenshot%202023-01-25%20012150.png?alt=media&token=22b4042d-52cf-4481-991f-5b5d7cd04143",
+      "count": null,
+      "id": 1
+    },
+    {
+      "category": {
+        "id": 1,
+        "name": "sushi",
+        "path": "Sushi",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a32ed.appspot.com/o/images%2FScreenshot%202023-01-24%20210540.png?alt=media&token=fd99582d-82ea-4f37-9738-1b58db52bd88"
+      },
+      "name": "Макі з тунцем ",
+      "path": "maki-z-tunczem",
+      "price": "157",
+      "ingredients": "Рис, норі, тунець",
+      "weight": "120",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a32ed.appspot.com/o/images%2FScreenshot%202023-01-25%20191538.png?alt=media&token=c4e16b68-dfac-4b31-8d3e-1d19b82bcbcb",
+      "count": null,
+      "id": 2
+    }
+  ]
+}

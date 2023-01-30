@@ -1,0 +1,125 @@
+@import '../../shared/styles/variables';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 1600px;
+
+    &__product-wrapper {
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    &__title {
+        width: 100%;
+        text-align: center;
+        font-family: 'RotondaC';
+        color: #5A5A5A;
+    }
+
+    &__title:hover {
+        color: $primary;
+    }
+
+    &__product-weight {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__product-price {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+button {
+    width: 109px;
+    height: 46px;
+    border: 2px solid $primary;
+    background:  $primary;
+    border-radius: 10px;
+    color: #252525;
+    font-weight: bold;
+    transition: .35s;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    font-weight: bold;
+    transition: .35s;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.center-info {
+    width: 550px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+ul {
+    margin: 0 auto;
+}
+
+.category {
+    display: flex;
+    margin: 0 auto;
+
+    &__ajax {
+        width: 104px;
+        text-decoration: none;
+        color: #252525;
+    }
+}
+
+.category-wrapper {
+    width: 70%;
+    margin: 20px auto;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    width: 168px;
+    height: 63px;
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+    min-width: 168px;
+    font-weight: bold;
+    border: 1px solid #dcdcdc;
+    color: #5A5A5A;
+    -webkit-transition: .35s;
+    transition: .35s;
+    margin-left: -1px;
+}
+
+h2 {
+    width: 93px;
+    height: 60px;
+    border-top: 6px solid $primary;
+    text-align: center;
+    color: #252525;
+    font-weight: bold;
+}

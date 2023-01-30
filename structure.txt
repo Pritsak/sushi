@@ -1,0 +1,25 @@
+app/
+    components/
+        /header 
+        /footer
+    pages/
+        home.component
+        product.component
+        delivery.component
+        about.component
+        discount.component
+        checkout.component
+    shared/
+        styles/
+            _variables.scss
+            _mixins.scss
+            _base.scss
+        interfaces/
+        pipes/
+        guards/
+        services/
+    admin.component
+        admin-category.component
+        admin-product.component
+        admin-discount.component
+        admin-orders.component

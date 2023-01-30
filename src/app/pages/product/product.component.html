@@ -1,0 +1,49 @@
+<div class="row category-wrapper">
+    <div class="center-info">
+        <h2>Роли</h2>
+    </div>
+    <ul class="col-12 category">
+        <li class="caterot__item"><a class="category__ajax">Роли</a></li>
+        <li class="caterot__item"><a class="category__ajax">Роли</a></li>
+        <li class="caterot__item"><a class="category__ajax">Роли</a></li>
+        <li class="caterot__item"><a class="category__ajax">Роли</a></li>
+        <li class="caterot__item"><a class="category__ajax">Роли</a></li>
+        <li class="caterot__item"><a class="category__ajax">Роли</a></li>
+        <li class="caterot__item"><a class="category__ajax">Роли</a></li>
+    </ul>
+</div>
+
+
+    <div class="container col-12">
+        <div class="container__product-wrapper" *ngFor="let product of userProduct">
+            <div class="container__imageWrapper">
+                <img [src]="product.imagePath" width="358px" height="233px">
+            </div>
+            <div class="container__title">
+                <a>{{ product.name }}</a>
+            </div>
+            <div class="container__product-weight">
+                <p>{{ product.ingredients }}</p>
+                <div>
+                    <span>{{ product.weight }}г</span>
+                </div>
+            </div>
+            <div class="container__product-price">
+                <div>
+                    <p>{{ product.price }}</p>
+                </div>
+                <button class="btn" type="button">Замовити</button>
+            </div>
+        </div>
+    </div>
+
+<ng-container *ngIf="!isUploaded">
+    <div class="card text-center">
+        <div class="card-header"></div>
+        <div class="card-body">
+            <h1 class="text-center">Products not added yet</h1>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+</ng-container>
